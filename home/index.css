@@ -1,0 +1,319 @@
+.container::-webkit-scrollbar {
+    width: 4px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    display: none;  /* Ocultar scroll */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.container::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.container::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+.container::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+    position: relative;
+}
+header{
+    background-color: #051a37;
+    position: relative;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+/*********************************************************************************/
+.mother{
+    display: inline-block;
+    transform: rotate(-45deg);
+    margin-left: 20px;
+}
+
+.heart {
+    background-color: red;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 30px;
+    animation: pulse 1s ease infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+/*****************************************/
+
+.favoria {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    border: 2px solid red;
+    z-index: 4000;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+  #formulario{
+      width: 70%;
+      margin: 8px auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  }
+  #buscar{
+      padding: 1rem 13rem;
+      background-color: #285a66;
+      border: none;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 500;
+  }
+  #boton{
+      margin-top:8px ;
+      padding: 10px 20px;
+  }
+
+  .lista{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0;
+    transition: width .5s,height .5s;
+    display:none;
+  }
+  .listaA{
+      width: 100%;
+     /*  height: 100vh; */
+      background-color: #0f1111;
+      z-index: 3000;
+      position: absolute;
+      top: 12vh;
+      bottom: auto;
+      font-size: 1rem;
+      min-height: 100%;
+      height: auto;
+      display: block;
+  }
+  /*.lista h2{
+    font-size: 0;
+  }*/
+ main{
+     width: 100%;
+
+ }
+ .section{
+     width: 80%;
+     margin: 0 auto;
+     max-width: 1400px;
+     /* display: flex;
+     justify-content: flex-start;
+    flex-wrap: wrap; */
+    column-count: 1;
+ }
+ .carga {
+     width: 100%;
+     height: 100%;
+     /* display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; */
+      column-count: 1;
+ }
+ .lista h2 {
+     text-align: center;
+     color: #ffffff;
+     font-size: 1.2rem;
+     margin-top: 2vh;
+     margin-bottom: 2vh;
+ }
+ .carga .father .eli{
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+   z-index: 2000;
+ }
+ .eliminar{
+     position: relative;
+     bottom: 0;
+     width: 100%;
+     padding: 10px 0;
+     color: #ffffff;
+     font-size: 1.2rem;
+     background-color: rgb(160, 8, 33);
+     border:none;
+     margin: 5px auto;
+ }
+ .simio {
+    width: 100%;
+    padding: 10px 0;
+    column-span: all;
+    color: #ffffff;
+     font-size: 1.2rem;
+     background-color: rgb(160, 8, 33);
+     text-align: center;
+     margin: 5px auto;
+     transition: background-color .5 ;
+ }
+ .father{
+     /*background-color: crimson;*/
+     position: relative;
+     width: 100%;
+     margin: 0 auto;
+    /*  height: 60vh; */
+ }
+ .father:hover .moreInfo{
+     opacity: 1;
+     width: 100%;
+     height: 100%;
+     font-size: 1rem;
+    
+ }
+ .father img{
+    width: 100%;
+    height: 75%;
+ }
+ .father h2{
+     text-align: center;
+     color: #ffffff;
+ }
+ .date{
+     color: #ffffff;
+     position: absolute;
+     padding: 4px 8px;
+     background-color: darkslategrey;
+     left: 0;
+     bottom: 0;
+ }
+ .fav{
+     width: 25px;
+     height: 25px;
+     border: 3px solid rgb(14, 211, 135);
+     background-color: rgb(255, 255, 255);
+     border-radius: 50%;
+     position: absolute;
+     top: 0;
+     right: 0;
+    z-index: 2000;
+ }
+ .active{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    z-index: 2000;
+ }
+ .moreInfo{
+    height: 40%;
+    width: 40%;
+    z-index: 1000;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+   /* display: none;*/
+   opacity: 0 ;
+    transition: width .5s, height 1s ;
+    background-color: darkviolet;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0rem;
+ }
+ .moreInfo .sypnosy{
+     margin: 0 auto;
+     height: 70%;
+     width: 80%;
+ }
+
+@media screen and (min-width:600px) {
+    .section{
+        column-count: 2;
+    }
+    .carga{
+        column-count: 2;
+    }
+}
+@media screen and (min-width:800px) {
+    .section{
+        column-count: 3;
+    }
+    .carga{
+        column-count: 3;
+    }
+}
+@media screen and (min-width:1200px) {
+    .section{
+        column-count: 4;
+    }
+    .carga{
+        column-count: 4;
+    }
+}
+@media screen and (min-width:1400px) {
+    .section{
+        column-count: 5;
+    }
+    .carga{
+        column-count: 5;
+    }
+}
